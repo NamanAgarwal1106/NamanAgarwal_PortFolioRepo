@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Naman Agarwal — Product Manager</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#6ee7b7;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071023 0%, #071829 60%);color:#e6eef6;line-height:1.5}
+    .container{max-width:1000px;margin:40px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#04202a}
+    h1{margin:0;font-size:28px}
+    .tagline{color:var(--muted);margin-top:6px;font-size:14px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px}
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:center;margin-top:28px}
+    .hero-card{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 6px 24px rgba(2,6,23,0.6);backdrop-filter:blur(6px)}
+    .hero h2{margin:0;font-size:20px}
+    .bio{color:var(--muted);margin-top:12px}
+    .cta{margin-top:18px;display:flex;gap:10px}
+    .btn{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#022024;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .stats{display:flex;gap:12px;margin-top:16px}
+    .stat{background:var(--glass);padding:10px;border-radius:10px;text-align:center;min-width:92px}
+    .projects{margin-top:34px}
+    .section-title{font-size:18px;margin-bottom:12px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    .card h3{margin:0 0 8px 0}
+    .pill{display:inline-block;background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
+    .muted{color:var(--muted);font-size:13px}
+    footer{margin-top:40px;padding:18px;text-align:center;color:var(--muted);font-size:13px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .contact{display:flex;gap:12px;align-items:center}
+    @media (max-width:880px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:1fr}}
+    /* subtle animations */
+    .fade{opacity:0;transform:translateY(8px);animation:fadeIn .7s forwards}
+    .fade.delay{animation-delay:.12s}
+    @keyframes fadeIn{to{opacity:1;transform:none}}
+    .project-meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+    .project-meta .impact{font-weight:700;color:var(--accent)}
+    .project-desc{color:var(--muted);margin-top:8px;font-size:14px}
+    .project-list{list-style:none;padding:0;margin:8px 0 0 0}
+    .project-list li{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .small{font-size:12px;color:var(--muted)}
+    .download{display:inline-flex;align-items:center;gap:8px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">NA</div>
+        <div>
+          <h1>Naman Agarwal</h1>
+          <div class="tagline">Product Manager | Generative & Agentic AI | SaaS, FinTech & Automation</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card fade">
+        <h2>Building intelligent, scalable & compliant platforms</h2>
+        <p class="bio">Dynamic Product Manager with 8+ years in SaaS, FinTech & AI-first automation products. Expert in defining product vision, leading Agile teams, and delivering customer-centric, data-driven solutions. Skilled in leveraging Generative, Emergent & Agentic AI to automate & design outcome-driven products leveraging LLMs, OCR, and cloud-native workflows to deliver measurable business impact and enhance UX across AWS, Azure & OpenAI ecosystems.</p>
+        <div class="cta">
+          <a class="btn" href="/mnt/data/NamanAgarwal_1611.pdf" target="_blank" download>Download Resume</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/naman-agarwal-13a77271" target="_blank">LinkedIn</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><div class="small">Experience</div><div><strong>8+ yrs</strong></div></div>
+          <div class="stat"><div class="small">Domains</div><div><strong>FinTech · SaaS · AI</strong></div></div>
+          <div class="stat"><div class="small">Focus</div><div><strong>Agentic AI · Automation</strong></div></div>
+        </div>
+      </div>
+
+      <aside class="hero-card fade delay">
+        <h3>Contact</h3>
+        <p class="muted">Email: <a href="mailto:namanagarwal297@gmail.com">namanagarwal297@gmail.com</a></p>
+        <p class="muted">Phone: +91-9462728028</p>
+        <div style="margin-top:12px"><span class="pill">Open to Opportunities</span></div>
+
+        <div style="margin-top:18px">
+          <h4 class="small">Quick Links</h4>
+          <div class="small"><a class="pill" style="text-decoration:none" href="#projects">Featured Projects</a></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="section-title">Featured Projects</div>
+      <div class="grid">
+        <article class="card fade">
+          <h3>Agentic AI Automation Workbench (Mortgage)</h3>
+          <div class="small">Theme — Agentic AI Automation Workflow</div>
+          <p class="project-desc">E2E Product / Program Management to help underwriting & operations teams realise FTE benefits by automating appraisal & document review workflows.</p>
+          <div class="project-meta">
+            <div class="pill">Role: E2E Product & Program Management</div>
+            <div class="impact">Impact: FTE & operational cost reduction</div>
+          </div>
+          <ul class="project-list">
+            <li><strong>Problem:</strong> Average TAT 3+ hours per loan case due to manual checks.</li>
+            <li><strong>Solution:</strong> Document ingestion pipeline + OCR + LLM agents to answer underwriter checks in &lt;15 mins; human-in-loop review.</li>
+            <li><strong>Deliverables:</strong> Ingestion pipeline (S3 → OCR → KB), LLM prompt design, agent orchestration, Ops UI.</li>
+          </ul>
+        </article>
+
+        <article class="card fade delay">
+          <h3>SCM CTRM Invoice Workflow Automation</h3>
+          <div class="small">Theme — Automation Workflow</div>
+          <p class="project-desc">Designed a generalized automation workflow to support 2000+ vendors across geographies, handling varied invoice formats and compliance rules.</p>
+          <div class="project-meta">
+            <div class="pill">Role: E2E Product Management</div>
+            <div class="impact">Impact: ~1.5 FTE reduction</div>
+          </div>
+          <ul class="project-list">
+            <li><strong>Problem:</strong> High variance in vendor invoice formats and compliance standards.</li>
+            <li><strong>Solution:</strong> OCR extraction, normalized data pipeline, indexer UI for human-in-loop verification before payment processing.</li>
+            <li><strong>Deliverables:</strong> Extraction models, UI indexer, validation workflows, compliance ruleset.</li>
+          </ul>
+        </article>
+
+        <article class="card fade">
+          <h3>FinTech Investment Platform (MF &amp; FD)</h3>
+          <div class="small">Theme — Modular Investment Platform</div>
+          <p class="project-desc">Led product strategy and delivery for a modular investment product offering Mutual Funds and Fixed Deposits with payment integration and analytics.</p>
+          <div class="project-meta">
+            <div class="pill">Role: Product Strategy & Delivery</div>
+            <div class="impact">Impact: User base growth ~30% (DAU/MAU uplift)</div>
+          </div>
+          <ul class="project-list">
+            <li><strong>Problem:</strong> Need for secure, modular platform to support MF &amp; FD offerings and scale user growth.</li>
+            <li><strong>Solution:</strong> Modular architecture, payment gateway integration (UPI/NetBanking), analytics dashboard, AI chatbot & notifications.</li>
+            <li><strong>Deliverables:</strong> Product roadmap, UI flows, stakeholder coordination, security requirements.</li>
+          </ul>
+        </article>
+
+        <article class="card fade delay">
+          <h3>Procure To Pay — Workflow Redesign</h3>
+          <div class="small">Theme — Workflow Redesign</div>
+          <p class="project-desc">Redesigned procure-to-pay workflow for 1500+ vendors to harmonize formats and reduce processing time with SAP integration.</p>
+          <div class="project-meta">
+            <div class="pill">Role: Product Roadmap & Delivery</div>
+            <div class="impact">Impact: ~30% reduction in TAT</div>
+          </div>
+          <ul class="project-list">
+            <li><strong>Problem:</strong> Heterogeneous vendor invoices &amp; compliance rules causing delays.</li>
+            <li><strong>Solution:</strong> Ingestion → OCR → UI for eyeball checks → SAP posting pipeline.</li>
+            <li><strong>Deliverables:</strong> End-to-end workflow, SAP integration patterns, validation rules.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" style="margin-top:30px">
+      <div class="section-title">Skills & Tools</div>
+      <div class="card">
+        <div class="skills">
+          <span class="pill">Product Strategy</span>
+          <span class="pill">Roadmapping</span>
+          <span class="pill">Agentic AI</span>
+          <span class="pill">Generative AI</span>
+          <span class="pill">OCR Pipelines</span>
+          <span class="pill">AWS / Azure</span>
+          <span class="pill">OpenAI</span>
+          <span class="pill">Jira</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">SQL</span>
+        </div>
+        <p class="muted" style="margin-top:12px">Technical keywords & platforms commonly used: AWS Textract, Bedrock, Azure OCR, OpenAI, Databricks, Microservices, S3, Fargate, Jenkins.</p>
+      </div>
+    </section>
+
+    <section id="about" style="margin-top:28px">
+      <div class="section-title">Experience Snapshot</div>
+      <div class="grid">
+        <div class="card fade">
+          <h3>Kadel Labs Pvt Ltd</h3>
+          <div class="small">Product Manager — Agentic AI Automation Workbench (Sep 2025 - Present)</div>
+          <p class="muted">Owned end-to-end product lifecycle, built OCR & LLM pipelines, prompt engineering, and piloted the workbench with Ops teams to deliver measurable TAT and cost improvements.</p>
+        </div>
+        <div class="card fade delay">
+          <h3>Adnate IT Solutions Pvt Ltd</h3>
+          <div class="small">Senior Consultant — FinTech & Automation (Oct 2021 - Apr 2025)</div>
+          <p class="muted">Managed digital investment products, redesigned core ITIL workflows to cut costs and improve posting times, implemented Power BI dashboards for KPI tracking.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <div class="section-title">Contact</div>
+      <div class="card">
+        <p class="muted">Feel free to reach out for product roles, advisory, or collaboration.</p>
+        <div class="contact" style="margin-top:12px">
+          <a class="btn" href="mailto:namanagarwal297@gmail.com">Email Me</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/naman-agarwal-13a77271" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">© Naman Agarwal — Built with focus on clarity, storytelling & measurable impact.</div>
+    </footer>
+  </div>
+
+  <script>
+    // simple smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth',block:'start'})}))
+  </script>
+</body>
+</html>
