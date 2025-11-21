@@ -5,273 +5,359 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Naman Agarwal — Product Manager</title>
-  <style>
-    :root {
-      --bg: #0f1724;
-      --card: #0b1220;
-      --muted: #9aa4b2;
-      --accent: #6ee7b7;
-      --glass: rgba(255, 255, 255, 0.03)
-    }
+<style>
+/* ---------- ORIGINAL THEME (untouched) ---------- */
+:root {
+  --bg1: #e0f7fa;
+  --bg2: #f3e7ff;
+  --card: rgba(255,255,255,0.7);
+  --border: rgba(255,255,255,0.12);
+  --muted: rgba(0,0,0,0.60);
+  --text: #e6f1ff;
+  --accent: #06b6d4;        /* Neon cyan */
+  --accent2: #818cf8;       /* Soft purple glow */
+  --glow: 0px 0px 18px rgba(77,225,255,0.50);
+}
 
-    * {
-      box-sizing: border-box
-    }
+/* keep original sizing rules */
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
-      background: linear-gradient(180deg, #071023 0%, #071829 60%);
-      color: #e6eef6;
-      line-height: 1.5
-    }
+body {
+  margin:0;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(180deg, var(--bg1), var(--bg2));
+  color: #1e293b;
+  line-height:1.6;
+  backdrop-filter: blur(2px);
+}
 
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 24px
-    }
+/* Container */
+.container {
+  max-width: 1080px;
+  margin:auto;
+  padding: 40px 26px;
+}
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px
-    }
+/* Header */
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-bottom: 28px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+/* Avatar */
+.avatar {
+  width:64px;
+  height:64px;
+  border-radius:14px;
+  background:linear-gradient(120deg, var(--accent), var(--accent2));
+  box-shadow: var(--glow);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:700;
+  font-size:22px;
+}
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px
-    }
+/* Name */
+h1 {
+  margin:0;
+  font-size:32px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip:text;
+  color:transparent;
+}
 
-    .avatar {
-      width: 64px;
-      height: 64px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), #60a5fa);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: #04202a
-    }
+/* Tagline */
+.tagline {
+  font-size:14px;
+  color:var(--muted);
+}
 
-    h1 {
-      margin: 0;
-      font-size: 28px;
-      background: linear-gradient(90deg, #06b6d4, #818cf8);
-      -webkit-background-clip: text;
-      color: transparent
-    }
+/* Navigation */
+nav a {
+  margin-left:18px;
+  font-size:14px;
+  text-decoration:none;
+  color:#0ea5e9;
+  font-weight:600;
+  padding-bottom:5px;
+  border-bottom:2px solid transparent;
+  transition:.25s;
+}
 
-    .tagline {
-      color: var(--muted);
-      margin-top: 6px;
-      font-size: 14px
-    }
+nav a:hover {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+  text-shadow: var(--glow);
+}
 
-    nav a {
-      color: #6ee7b7;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px
-    }
+/* Hero */
+.hero {
+  display:grid;
+  grid-template-columns: 1fr 320px;
+  gap:30px;
+  align-items: center;
+  margin-top: 30px;
+}
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 28px;
-      align-items: center;
-      margin-top: 28px
-    }
+.hero-card {
+  background: var(--card);
+  border:1px solid var(--border);
+  padding:26px;
+  border-radius:16px;
+  backdrop-filter: blur(12px);
+  box-shadow:0 0 20px rgba(0,0,0,0.25);
+}
 
-    .hero-card {
-      background: var(--card);
-      padding: 22px;
-      border-radius: 12px;
-      box-shadow: 0 6px 24px rgba(2, 6, 23, 0.6);
-      backdrop-filter: blur(6px)
-    }
+/* Buttons */
+.btn {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color:white;
+  padding:10px 16px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow: var(--glow);
+}
 
-    .hero h2 {
-      margin: 0;
-      font-size: 20px
-    }
+.btn:hover {
+  opacity:.88;
+}
 
-    .bio {
-      color: var(--muted);
-      margin-top: 12px
-    }
+.btn.ghost {
+  background:transparent;
+  border:1px solid var(--border);
+  color:#0066cc;
+  backdrop-filter: blur(6px);
+}
 
-    .cta {
-      margin-top: 18px;
-      display: flex;
-      gap: 10px
-    }
+.btn.ghost:hover {
+  border-color: var(--accent);
+}
 
-    .btn {
-      background: linear-gradient(90deg, var(--accent), #60a5fa);
-      color: #022024;
-      padding: 10px 14px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600
-    }
+/* Stats */
+.stats {
+  margin-top:20px;
+  display:flex;
+  gap:12px;
+}
 
-    .btn.ghost {
-      background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--muted)
-    }
+.stat {
+  background: #fafafa;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,0.10);
+  min-width:180px;
+  text-align:center;
+  backdrop-filter: blur(8px);
+}
 
-    .stats {
-      display: flex;
-      gap: 12px;
-      margin-top: 16px
-    }
+/* Section Title */
+.section-title {
+  margin-top:48px;
+  font-size:22px;
+  font-weight:800;
+  color:#0066cc;
+  text-shadow: var(--glow);
+  margin-bottom:18px;
+}
 
-    .stat {
-      background: var(--glass);
-      padding: 10px;
-      border-radius: 10px;
-      text-align: center;
-      min-width: 92px
-    }
+/* Cards */
+.grid {
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:20px;
+}
 
-    .projects {
-      margin-top: 34px
-    }
+.card {
+  background: var(--card);
+  border:1px solid var(--border);
+  padding:20px;
+  border-radius:16px;
+  backdrop-filter: blur(12px);
+  transition:.25s;
+  position:relative;
+}
 
-    .section-title {
-      font-size: 18px;
-      margin-bottom: 12px
-    }
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:0px 12px 32px rgba(77,225,255,0.25);
+  border-color: var(--accent);
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px
-    }
+/* Pills */
+.pill {
+  background: rgba(0,0,0,0.10);
+  color: #64748b;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:600;
+}
 
-    .card {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-      padding: 16px;
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.02)
-    }
+/* Project Impact */
+.project-meta .impact {
+  color: #15803d;
+  font-weight:700;
+  text-shadow: var(--glow);
+}
 
-    .card h3 {
-      margin: 0 0 8px 0
-    }
+/* Text */
+.muted {
+  color: var(--muted);
+  font-size:14px;
+}
 
-    .pill {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.03);
-      padding: 6px 8px;
-      border-radius: 999px;
-      font-size: 12px;
-      color: var(--muted)
-    }
+.project-desc,
+.project-list li {
+  color: var(--muted);
+}
 
-    .muted {
-      color: var(--muted);
-      font-size: 13px
-    }
+/* Skills */
+.skills .pill {
+  background: rgba(29,185,84,0.08);
+  color: #15803d;
+}
 
-    footer {
-      margin-top: 40px;
-      padding: 18px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px
-    }
+/* Footer */
+footer {
+  text-align:center;
+  color:var(--muted);
+  font-size:14px;
+  margin-top:50px;
+  padding-top:32px;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px
-    }
+/* Animation */
+.fade { opacity:0; transform:translateY(8px); animation:fadeIn .7s forwards; }
+.fade.delay { animation-delay:.15s; }
 
-    .contact {
-      display: flex;
-      gap: 12px;
-      align-items: center
-    }
+@keyframes fadeIn { to { opacity:1; transform:none; } }
 
-    @media (max-width:880px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
+/* Responsive */
+@media (max-width:880px) {
+  .hero { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr; }
+}
 
-      .grid {
-        grid-template-columns: 1fr
-      }
-    }
 
-    /* subtle animations */
-    .fade {
-      opacity: 0;
-      transform: translateY(8px);
-      animation: fadeIn .7s forwards
-    }
+/* ---------- SUPPLEMENTAL STYLES FOR NEW COMPONENTS (does not change your theme) ---------- */
 
-    .fade.delay {
-      animation-delay: .12s
-    }
+:root[data-theme='dark'] {
+  /* simple dark theme variables for toggle */
+  --bg1: #020617;
+  --bg2: #071029;
+  --card: rgba(10,12,18,0.75);
+  --border: rgba(255,255,255,0.06);
+  --muted: #9aa4b2;
+  --text: #dbeafe;
+  --accent: #4de1ff;
+  --accent2: #7366ff;
+  --glow: 0px 0px 18px rgba(77,225,255,0.35);
+  color-scheme: dark;
+}
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: none
-      }
-    }
+/* small layout for timeline */
+.timeline {
+  margin-top: 18px;
+  border-left: 4px dashed rgba(0,0,0,0.30);
+  padding-left: 18px;
+}
+.timeline .node {
+  margin-bottom: 18px;
+  position: relative;
+  padding-left: 14px;
+}
+.timeline .node::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(90deg,var(--accent),var(--accent2));
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+}
 
-    .project-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 2px
-    }
+/* small badges for metrics */
+.metrics {
+  display:flex;
+  gap:14px;
+  margin-top:18px;
+  flex-wrap:wrap;
+}
+.metric {
+  background: rgba(255,255,255,0.85);
+  padding:14px;
+  border-radius:12px;
+  min-width:160px;
+  text-align:center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+.metric .metric-num {
+  font-size:22px;
+  font-weight:800;
+  color:var(--accent);
+}
+.metric-num-plus::after {
+    content: "+";
+    /* Optional styling for the plus sign */
+    margin-left: 2px;
+    color: var(--accent);
+}
+.metric-num-per::after {
+    content: "%";
+    /* Optional styling for the plus sign */
+    margin-left: 2px;
+    color: var(--accent);
+}
+/* PM philosophy tiles */
+.philosophy {
+  display:flex;
+  gap:12px;
+  margin-top:18px;
+  flex-wrap:wrap;
+}
+.philosophy .tile {
+  flex: 1 1 160px;
+  padding:14px;
+  border-radius:12px;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  transition: transform .18s, box-shadow .18s;
+}
+.philosophy .tile:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,0.06); }
 
-    .project-meta .impact {
-      font-weight: 700;
-      color: var(--accent)
-    }
+/* testimonials slider */
+.testimonials { margin-top:18px; position: relative; overflow: hidden; border-radius:12px; }
+.testimonials .track { display:flex; gap:12px; transition: transform .45s cubic-bezier(.2,.9,.2,1); }
+.testimonial { min-width:280px; padding:18px; background: rgba(255,255,255,0.9); border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.04); }
 
-    .project-desc {
-      color: var(--muted);
-      margin-top: 8px;
-      font-size: 14px
-    }
+/* small controls */
+.slider-controls { display:flex; gap:8px; align-items:center; margin-top:10px; }
+.toggle-btn { cursor:pointer; padding:8px 10px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); background:rgba(255,255,255,0.9); }
 
-    .project-list {
-      list-style: none;
-      padding: 0;
-      margin: 8px 0 0 0
-    }
+/* small video container */
+.demo-video { margin-top:16px; border-radius:12px; overflow:hidden; border:1px solid rgba(0,0,0,0.06); }
 
-    .project-list li {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 6px
-    }
-
-    .small {
-      font-size: 12px;
-      color: var(--muted)
-    }
-
-    .download {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px
-    }
-  </style>
+/* in-view helper */
+.in-view { opacity:1 !important; transform:none !important; animation:none !important; transition: all .6s ease; }
+</style>
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" id="page-root">
     <header>
       <div class="brand">
         <div class="avatar">NA</div>
@@ -281,23 +367,17 @@
         </div>
       </div>
       <nav>
-        <a href="#projects">
-          <strong>Projects</strong>
-        </a>
-        <a href="#skills">
-          <strong>Skills</strong>
-        </a>
-        <a href="#about">
-          <strong>About Me</strong>
-        </a>
-        <a href="#contact">
-          <strong>Contact</strong>
-        </a>
+        <a href="#projects"><strong>Projects</strong></a>
+        <a href="#skills"><strong>Skills</strong></a>
+        <a href="#about"><strong>About Me</strong></a>
+        <a href="#contact"><strong>Contact</strong></a>
+        <!-- Dark/Light toggle -->
+        <button id="themeToggle" class="toggle-btn" title="Toggle dark / light" style="margin-left:12px">🌙</button>
       </nav>
     </header>
 
     <section class="hero">
-      <div class="hero-card fade">
+      <div class="hero-card fade" aria-hidden="false">
         <h2>Building intelligent, scalable & compliant platforms</h2>
         <p class="bio">Dynamic Product Manager with 8+ years in SaaS, FinTech & AI-first automation products. Expert in
           defining product vision, leading Agile teams, and delivering customer-centric, data-driven solutions. Skilled
@@ -305,30 +385,51 @@
           OCR, and cloud-native workflows to deliver measurable business impact and enhance UX across AWS, Azure &
           OpenAI ecosystems.</p>
         <div class="cta">
-          <a class="btn" href="/mnt/data/NamanAgarwal_1611.pdf" target="_blank" download>Download Resume</a>
+          <!-- use uploaded resume file path for download (dev will convert path to url) -->
+          <a class="btn" id="downloadResume" href="/mnt/data/NamanAgarwal_1611.pdf" target="_blank" download>Download Resume</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/naman-agarwal-13a77271" target="_blank">LinkedIn</a>
         </div>
 
         <div class="stats">
-          <div class="stat">
-            <div class="small">Experience</div>
-            <div><strong>8+ yrs</strong></div>
+          <!-- Animated metric counters -->
+          <div class="stat metric">
+            <div class="small">Users impacted</div>
+            <div class="metric-num metric-num-plus" data-target="2000000">0</div>
+          
           </div>
-          <div class="stat">
-            <div class="small">Domains</div>
-            <div><strong>· FinTech<br>· Real Estate<br>· Automobile<br>· Supply Chain</strong></div>
+          <div class="stat metric">
+            <div class="small">FTEs saved</div>
+            <div class="metric-num metric-num-plus" data-target="10">0</div>
+           
           </div>
-          <div class="stat">
-            <div class="small">Focus</div>
-            <div><strong>· Agentic AI<br>· Automation Workflow<br>· Product Strategy & Lifecycle<br>· Data Analytics</strong></div>
+          <div class="stat metric">
+            <div class="small">Average TAT reduction</div>
+            <div class="metric-num metric-num-per" data-target="30">0</div>
+           
           </div>
         </div>
+
+        <!-- small PM metrics dashboard -->
+        <div class="metrics" aria-hidden="false">
+          <div class="metric">
+            <div class="small">Products launched</div>
+            <div class="metric-num metric-num-plus" data-target="9">0</div>
+          </div>
+          <div class="metric">
+            <div class="small">Integrations</div>
+            <div class="metric-num metric-num-plus" data-target="20">0</div>
+          </div>
+          <div class="metric">
+            <div class="small">Stakeholders managed</div>
+            <div class="metric-num metric-num-plus" data-target="50">0</div>
+          </div>
+        </div>
+
       </div>
 
-      <aside class="hero-card fade delay">
+      <aside class="hero-card fade delay" aria-hidden="false">
         <h3>Contact</h3>
-        <p class="muted"><strong>Email: <a
-              href="mailto:namanagarwal297@gmail.com">namanagarwal297@gmail.com</a></strong></p>
+        <p class="muted"><strong>Email: <a href="mailto:namanagarwal297@gmail.com">namanagarwal297@gmail.com</a></strong></p>
         <p class="muted"><strong>Phone: +91-9462728028</strong></p>
         <div style="margin-top:12px"><span class="pill"><strong>Open to Opportunities</strong></span></div>
 
@@ -336,6 +437,8 @@
           <h4 class="small">Quick Links</h4>
           <div class="small"><a class="pill" style="text-decoration:none" href="#projects">Featured Projects</a></div>
         </div>
+
+
       </aside>
     </section>
 
@@ -344,98 +447,89 @@
       <div class="grid">
         <article class="card fade">
           <div class="project-meta">
-            <div class="pill"></div>
+            <span class="pill">Agentic AI</span>
+            <span class="pill">Mortgage Management System</span>
             <div class="impact">Impact: FTE & operational cost reduction</div>
           </div>
           <h3>Agentic AI Automation Workbench</h3>
-          <div class="small">Agentic AI · Mortgage Management System</div>
+  
           <p class="project-desc">E2E Product Management to help underwriting & operations teams realise FTE benefits by
             automating appraisal & document review workflows.</p>
-          <div class="project-meta">
 
-
-          </div>
           <ul class="project-list">
-            <li><strong>Problem:</strong> Operational Redundancy due to average TAT being 3+ hours per loan due to
-              multiple manual checks by Underwriter.</li>
-            <li><strong>Solution:</strong> Document ingestion pipeline + OCR + LLM agents to answer all process checks
-              in &lt;15 mins with human-in-loop review.</li>
-            <li><strong>Deliverables:</strong> Ingestion pipeline (S3 → OCR → KB), LLM prompt design, agent
-              orchestration, Ops UI.</li>
+            <li><strong>Problem:</strong> Operational Redundancy due to average TAT being 3+ hours per loan due to multiple manual checks by Underwriter.</li>
+            <li><strong>Solution:</strong> Document ingestion pipeline + OCR + LLM agents to answer all process checks in &lt;15 mins with human-in-loop review.</li>
+            <li><strong>Deliverables:</strong> Ingestion pipeline (S3 → OCR → KB), LLM prompt design, agent orchestration, Ops UI.</li>
           </ul>
+
+         
         </article>
 
         <article class="card fade delay">
-
           <div class="project-meta">
-            <div class="pill"></div>
+            <span class="pill">SCM CTRM Integration</span>
+            <span class="pill">Direct Cost Invoice Automation</span>
             <div class="impact">Impact: ~1.5 FTE reduction</div>
           </div>
           <h3>SCM CTRM Integration Workflow</h3>
-          <div class="small">Automation Workflow · OCR Extraction</div>
-          <p class="project-desc">Designed a generalized automation workflow to support 2000+ vendors across
-            geographies, handling varied invoice formats and compliance rules.</p>
-          <div class="project-meta">
+          
+          <p class="project-desc">Designed a generalized automation workflow to support 2000+ vendors across geographies, handling varied invoice formats and compliance rules.</p>
 
-          </div>
           <ul class="project-list">
             <li><strong>Problem:</strong> High variance in vendor invoice formats and compliance standards.</li>
-            <li><strong>Solution:</strong> OCR extraction, normalized data pipeline, indexer UI for human-in-loop
-              verification before payment processing.</li>
-            <li><strong>Deliverables:</strong> Extraction models, UI indexer, validation workflows, compliance ruleset.
-            </li>
+            <li><strong>Solution:</strong> OCR extraction, normalized data pipeline, indexer UI for human-in-loop verification before payment processing.</li>
+            <li><strong>Deliverables:</strong> Extraction models, UI indexer, validation workflows, compliance ruleset.</li>
           </ul>
+
+         
         </article>
 
         <article class="card fade">
-
           <div class="project-meta">
-            <div class="pill"></div>
+            <span class="pill">Fin-Tech</span>
+            <span class="pill">Mutual Funds</span>
+            <span class="pill">Fixed Deposits</span>
             <div class="impact">Impact: User base growth ~30% (DAU/MAU uplift)</div>
           </div>
           <h3>FinTech Investment Platform</h3>
-          <div class="small">Mutual Funds · Fixed Deposits</div>
-          <p class="project-desc">Led product strategy and delivery for a modular investment product offering Mutual
-            Funds and Fixed Deposits with payment integration and analytics.</p>
-          <div class="project-meta">
+          
+          <p class="project-desc">Led product strategy and delivery for a modular investment product offering Mutual Funds and Fixed Deposits with payment integration and analytics.</p>
 
-          </div>
           <ul class="project-list">
-            <li><strong>Problem:</strong> Need for secure, modular platform to support MF &amp; FD offerings and scale
-              user growth.</li>
-            <li><strong>Solution:</strong> Modular architecture, payment gateway integration (UPI/NetBanking), analytics
-              dashboard, AI chatbot & notifications.</li>
-            <li><strong>Deliverables:</strong> Product roadmap, UI flows, stakeholder coordination, security
-              requirements.</li>
+            <li><strong>Problem:</strong> Need for secure, modular platform to support MF &amp; FD offerings and scale user growth.</li>
+            <li><strong>Solution:</strong> Modular architecture, payment gateway integration (UPI/NetBanking), analytics dashboard, AI chatbot & notifications.</li>
+            <li><strong>Deliverables:</strong> Product roadmap, UI flows, stakeholder coordination, security requirements.</li>
           </ul>
+
+          
         </article>
 
         <article class="card fade delay">
-
           <div class="project-meta">
-            <div class="pill"></div>
+            <span class="pill">P2P</span>
+            <span class="pill">Invoice Automation</span>
+            <span class="pill">Payment Processing</span>
             <div class="impact">Impact: ~30% reduction in TAT</div>
           </div>
           <h3>Procure To Pay</h3>
-          <div class="small">Invoicing & Payment Workflow Design</div>
-          <p class="project-desc">Redesigned procure-to-pay workflow for 1500+ vendors to harmonize formats and reduce
-            processing time with SAP integration.</p>
-          <div class="project-meta">
+          
+          <p class="project-desc">Redesigned procure-to-pay workflow for 1500+ vendors to harmonize formats and reduce processing time with SAP integration.</p>
 
-          </div>
           <ul class="project-list">
             <li><strong>Problem:</strong> Heterogeneous vendor invoices &amp; compliance rules causing delays.</li>
             <li><strong>Solution:</strong> Ingestion → OCR → UI for eyeball checks → SAP posting pipeline.</li>
             <li><strong>Deliverables:</strong> End-to-end workflow, SAP integration patterns, validation rules.</li>
           </ul>
+
+         
         </article>
       </div>
     </section>
 
-    <section id="skills" style="margin-top:30px">
+    <section id="skills"  style="margin-top:30px">
       <div class="section-title">Skills & Tools</div>
       <div class="card">
-        <div class="skills">
+        <div class="skills" id="skillsTile">
           <span class="pill">Product Strategy</span>
           <span class="pill">Roadmapping</span>
           <span class="pill">Agentic AI</span>
@@ -445,43 +539,65 @@
           <span class="pill">OpenAI</span>
           <span class="pill">Feature Prioritization</span>
           <span class="pill">Stakeholder Management</span>
-          <span class="pill">Cross-functional Collaboration</span>
+          <span class="pill">Cross-Functional Collaboration</span>
           <span class="pill">Amazon Q</span>
           <span class="pill">Power BI</span>
           <span class="pill">Git</span>
         </div>
 
+        <!-- radar chart canvas appended by JS -->
       </div>
     </section>
 
-    <section id="about" style="margin-top:28px">
+    <section style="margin-top:28px">
       <div class="section-title">Experience Snapshot</div>
-      <div class="grid">
+
+      <!-- interactive timeline (keeps the cards below for fallback/readability) -->
+      <div class="timeline" id="experienceTimeline">
+        <div class="node" data-company="Kadel Labs Pvt Ltd">
+          <strong>Kadel Labs Pvt Ltd</strong> — Product Manager — Agentic AI Automation Workbench (Sep 2025 - Present)
+          <div class="muted">Owned end-to-end product lifecycle, built OCR & LLM pipelines, prompt engineering, and piloted the workbench with Ops teams to deliver measurable TAT and cost improvements.</div>
+        </div>
+
+        <div class="node" data-company="Adnate IT Solutions Pvt Ltd">
+          <strong>Adnate IT Solutions Pvt Ltd</strong> — Senior Consultant — FinTech & Automation (Oct 2021 - Apr 2025)
+          <div class="muted">Managed digital investment products, redesigned core ITIL workflows to cut costs and improve posting times, implemented Power BI dashboards for KPI tracking.</div>
+        </div>
+
+        <div class="node" data-company="Innojar Tech Pvt Ltd">
+          <strong>Innojar Tech Pvt Ltd</strong> — Software Developer — Task Manager (Jan 2018 - Oct 2021)
+          <div class="muted">Managed & Designed task-tracking modules using Microservices(Java), reducing manual effort by 25% and improving process reliability and scalability.</div>
+        </div>
+
+        <div class="node" data-company="Accenture Solutions Pvt Ltd">
+          <strong>Accenture Solutions Pvt Ltd</strong> — Application Development Associate — BDD Automation Testing Tool (Feb 2017 - Jan 2018)
+          <div class="muted">Designed a BDD-based automation testing tool for one of the leading Investment Bank, cutting manual testing efforts by 20%.</div>
+        </div>
+      </div>
+
+      <!-- original cards as fallback / layout 
+      <div class="grid" style="margin-top:18px">
         <div class="card fade">
           <h3>Kadel Labs Pvt Ltd</h3>
           <div class="small">Product Manager — Agentic AI Automation Workbench (Sep 2025 - Present)</div>
-          <p class="muted">Owned end-to-end product lifecycle, built OCR & LLM pipelines, prompt engineering, and
-            piloted the workbench with Ops teams to deliver measurable TAT and cost improvements.</p>
+          <p class="muted">Owned end-to-end product lifecycle, built OCR & LLM pipelines, prompt engineering, and piloted the workbench with Ops teams to deliver measurable TAT and cost improvements.</p>
         </div>
         <div class="card fade delay">
           <h3>Adnate IT Solutions Pvt Ltd</h3>
           <div class="small">Senior Consultant — FinTech & Automation (Oct 2021 - Apr 2025)</div>
-          <p class="muted">Managed digital investment products, redesigned core ITIL workflows to cut costs and improve
-            posting times, implemented Power BI dashboards for KPI tracking.</p>
+          <p class="muted">Managed digital investment products, redesigned core ITIL workflows to cut costs and improve posting times, implemented Power BI dashboards for KPI tracking.</p>
         </div>
         <div class="card fade">
           <h3>Innojar Tech Pvt Ltd</h3>
           <div class="small">Software Developer — Task Manager (Jan 2018 - Oct 2021)</div>
-          <p class="muted">Managed & Designed task-tracking modules using Microservices(Java), reducing manual effort by
-            25% and improving process reliability and scalability.</p>
+          <p class="muted">Managed & Designed task-tracking modules using Microservices(Java), reducing manual effort by 25% and improving process reliability and scalability.</p>
         </div>
         <div class="card fade delay">
           <h3>Accenture Solutions Pvt Ltd</h3>
           <div class="small">Application Development Associate — BDD Automation Testing Tool (Feb 2017 - Jan 2018)</div>
-          <p class="muted">Designed a BDD-based automation testing tool for one of the leading Investment Bank, cutting
-            manual testing efforts by 20%.</p>
+          <p class="muted">Designed a BDD-based automation testing tool for one of the leading Investment Bank, cutting manual testing efforts by 20%.</p>
         </div>
-      </div>
+      </div>-->
     </section>
 
     <section id="about" style="margin-top:28px">
@@ -509,8 +625,63 @@
           empower users, and deliver real business impact. My mission is to create intelligent systems that feel
           effortless, powerful, and human-centric.<br><br>
 
-          <i>"Products should not just automate work—they should elevate how people work."</i>
+          <strong><i>"Products should not just automate work—they should elevate how people work."</i></strong>
         </p>
+
+        <!-- PM Philosophy section -->
+        <div class="section-title" style="margin-top:18px">How I Build Products</div>
+        <div class="philosophy">
+          <div class="tile">
+            <strong>Discover</strong>
+            <div class="muted">User interviews, journey mapping, hypothesis framing.</div>
+          </div>
+          <div class="tile">
+            <strong>Prioritise</strong>
+            <div class="muted">Impact vs. effort, OKRs, RICE & opportunity sizing.</div>
+          </div>
+          <div class="tile">
+            <strong>Experiment</strong>
+            <div class="muted">Prototypes, A/B tests, metrics-first validation.</div>
+          </div>
+          <div class="tile">
+            <strong>Deliver</strong>
+            <div class="muted">Agile sprints, stakeholder alignment, security & compliance.</div>
+          </div>
+          <div class="tile">
+            <strong>Iterate</strong>
+            <div class="muted">Feedback loops, monitoring, continuous improvement.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="testimonials" style="margin-top:28px">
+      <div class="section-title">Testimonials</div>
+      <div class="card">
+        <div class="testimonials">
+          <div class="track" id="testimonialsTrack">
+            <div class="testimonial">
+              <strong>Manager — Kadel Labs</strong>
+              <div class="muted">"Naman led the agentic AI workbench initiative end-to-end — delivering measurable FTE savings."</div>
+            </div>
+            <div class="testimonial">
+              <strong>Client — Adnate</strong>
+              <div class="muted">"Reliable, pragmatic, and excellent at stakeholder coordination across complex integrations."</div>
+            </div>
+            <div class="testimonial">
+              <strong>Senior Eng — Innojar</strong>
+              <div class="muted">"Great at translating product needs into clear technical requirements and acceptance criteria."</div>
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <button id="prevTestimonial" class="toggle-btn">◀</button>
+            <button id="nextTestimonial" class="toggle-btn">▶</button>
+            <div style="flex:1"></div>
+            <div class="small">Auto-rotates every 6s</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -519,7 +690,7 @@
       <div class="card">
         <p class="muted">Feel free to reach out for product roles, advisory, or collaboration.</p>
         <div class="contact" style="margin-top:12px">
-          <a class="btn" href="mailto:namanagarwal297@gmail.com">Email Me</a>
+          <a class="btn" href="/mnt/data/NamanAgarwal_1611.pdf">Email Me</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/naman-agarwal-13a77271" target="_blank">LinkedIn</a>
         </div>
       </div>
@@ -530,9 +701,196 @@
     </footer>
   </div>
 
+  <!-- External libs -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
   <script>
-    // simple smooth scroll for nav links
-    document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth', block: 'start' }) }))
+    // ---------------------------
+    // Smooth scroll for nav links (already present) - keep it
+    document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }));
+
+    // ---------------------------
+    // Theme toggle (Dark / Light)
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    // read saved preference
+    if (localStorage.getItem('pm_theme') === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+      themeToggle.textContent = '☀️';
+    }
+    themeToggle.addEventListener('click', () => {
+      if (root.getAttribute('data-theme') === 'dark') {
+        root.removeAttribute('data-theme');
+        localStorage.setItem('pm_theme', 'light');
+        themeToggle.textContent = '🌙';
+      } else {
+        root.setAttribute('data-theme', 'dark');
+        localStorage.setItem('pm_theme', 'dark');
+        themeToggle.textContent = '☀️';
+      }
+    });
+
+    // ---------------------------
+    // Intersection Observer for .fade elements (smooth, staggered)
+    const faders = document.querySelectorAll('.fade');
+    const appearOptions = { threshold: 0.12 };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach((f, i) => {
+      // small stagger using animation delay style
+      f.style.animationDelay = (i * 80) + 'ms';
+      appearOnScroll.observe(f);
+    });
+
+    // ---------------------------
+    // Animated metrics counters
+    const metricEls = document.querySelectorAll('.metric-num');
+    metricEls.forEach(el => {
+      const animate = () => {
+        const target = +el.dataset.target || 0;
+        let current = 0;
+        const step = Math.max(1, Math.round(target / 90));
+        const tick = () => {
+          current += step;
+          if (current < target) {
+            el.innerText = current.toLocaleString();
+            requestAnimationFrame(tick);
+          } else {
+            el.innerText = target.toLocaleString();
+          }
+        };
+        tick();
+      };
+      // start when visible
+      const obs = new IntersectionObserver((entries, o) => {
+        if (entries[0].isIntersecting) { animate(); o.disconnect(); }
+      }, { threshold: 0.2 });
+      obs.observe(el);
+    });
+/*
+    // ---------------------------
+    // Radar chart for skills (Chart.js)
+    (function renderSkillChart(){
+      const skillsCard = document.querySelector('#skills .card') || document.querySelector('#skills .card');
+      if (!skillsCard) return;
+      const canvas = document.createElement('canvas');
+      canvas.id = 'skillsRadar';
+      canvas.style.maxWidth = '420px';
+      canvas.style.marginTop = '14px';
+      skillsCard.appendChild(canvas);
+
+      const data = {
+        labels: ['AI/ML','Automation','Roadmapping','Strategy','Stakeholder Mgmt','Data & Analytics'],
+        datasets: [{
+          label: 'Skill strength',
+          data: [90, 88, 85, 86, 82, 78],
+          borderColor: getComputedStyle(document.documentElement).getPropertyValue('--accent') || '#06b6d4',
+          backgroundColor: 'rgba(6,182,212,0.18)',
+          pointBackgroundColor: '#fff',
+          pointBorderColor: getComputedStyle(document.documentElement).getPropertyValue('--accent2') || '#818cf8'
+        }]
+      };
+
+      const config = {
+        type: 'radar',
+        data,
+        options: {
+          responsive: true,
+          scales: {
+            r: {
+              beginAtZero: true,
+              suggestedMax: 100,
+              grid: { color: 'rgba(0,0,0,0.04)' },
+              angleLines: { color: 'rgba(0,0,0,0.04)' },
+              ticks: { display: false }
+            }
+          },
+          plugins: { legend: { display: false } }
+        }
+      };
+      new Chart(canvas, config);
+    })();
+*/
+    // ---------------------------
+    // Testimonials slider (simple)
+    (function testimonialsSlider(){
+      const track = document.getElementById('testimonialsTrack');
+      if(!track) return;
+      const slides = track.children;
+      let index = 0;
+      const show = i => {
+        const width = slides[0].offsetWidth + 12; // gap
+        track.style.transform = `translateX(-${i * width}px)`;
+      };
+      document.getElementById('nextTestimonial').addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        show(index);
+      });
+      document.getElementById('prevTestimonial').addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        show(index);
+      });
+      // auto rotate
+      setInterval(()=>{ index = (index + 1) % slides.length; show(index); }, 6000);
+      window.addEventListener('resize', ()=> show(index));
+    })();
+
+    // ---------------------------
+    // Hover interactions on cards (adds extra class on pointer enter)
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('pointerenter', ()=> card.classList.add('hovering'));
+      card.addEventListener('pointerleave', ()=> card.classList.remove('hovering'));
+    });
+
+    // ---------------------------
+    // Experience timeline: clicking a node scrolls to that company card
+    document.querySelectorAll('.timeline .node').forEach(node => {
+      node.addEventListener('click', () => {
+        // find matching card by company name in grid (fallback: scroll to grid)
+        const company = node.dataset.company;
+        const cards = Array.from(document.querySelectorAll('.grid .card'));
+        const match = cards.find(c => c.textContent.includes(company));
+        if (match) match.scrollIntoView({behavior:'smooth', block:'center'});
+        // small highlight
+        node.style.transform = 'translateX(6px)';
+        setTimeout(()=> node.style.transform = 'none', 400);
+      });
+    });
+
+    // ---------------------------
+    // Add subtle "lift" effect by adjusting box-shadow on hovering (keeps original CSS)
+    // (We don't modify original styling - only toggling an inline style)
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.transition = 'transform .18s ease, box-shadow .18s ease';
+        card.style.transform = 'translateY(-6px)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+
+    // ---------------------------
+    // Accessibility: if user prefers reduced motion, stop animations
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mq.matches) {
+      document.querySelectorAll('.fade').forEach(e => e.classList.add('in-view'));
+    }
+
+    // ---------------------------
+    // Small helper: convert local file path to link that the hosting env will map
+    // (We used /mnt/data/NamanAgarwal_1611.pdf in anchors above as instructed)
+    // No further action needed here.
+
   </script>
 </body>
 
