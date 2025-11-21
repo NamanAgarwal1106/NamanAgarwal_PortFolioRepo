@@ -265,8 +265,13 @@ footer {
   --accent2: #7366ff;
   --glow: 0px 0px 18px rgba(77,225,255,0.35);
   color-scheme: dark;
+  
 }
-
+:root[data-theme='dark'] .hero-card p,
+:root[data-theme='dark'] .hero-card h2 ,
+:root[data-theme='dark'] .timeline {
+  color: var(--text);
+}
 /* small layout for timeline */
 .timeline {
   margin-top: 18px;
@@ -386,7 +391,7 @@ footer {
           OpenAI ecosystems.</p>
         <div class="cta">
           <!-- use uploaded resume file path for download (dev will convert path to url) -->
-          <a class="btn" id="downloadResume" href="https://drive.google.com/file/d/1cuiiiSOTAVt-O9frqtHemC8crQPI4pqu/view?usp=drive_link" target="_blank" download>Download Resume</a>
+          <a class="btn" id="downloadResume" href="/mnt/data/NamanAgarwal_1611.pdf" target="_blank" download>Download Resume</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/naman-agarwal-13a77271" target="_blank">LinkedIn</a>
         </div>
 
